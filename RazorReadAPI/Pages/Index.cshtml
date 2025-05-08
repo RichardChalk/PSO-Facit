@@ -1,0 +1,31 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Samtliga Superheroes</h1>
+    <h1>Samtliga Meddelanden</h1>
+
+</div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var superHero in Model.SuperHeroes)
+        {
+            <tr>
+                <td>@superHero.Id</td>
+                <td>@superHero.Name</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
